@@ -1,5 +1,5 @@
-/* Podcast Container */
-.podcast-container {
+/* Newsletter Container */
+.newsletter-container {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
@@ -7,19 +7,19 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Removed background-color to make it transparent */
+    /* Transparent background to allow any global background (e.g., particles) to show */
   }
   
   /* Coming Soon Message */
   .coming-soon {
     position: absolute;
-    z-index: 1; /* Ensure it appears above the particles */
+    z-index: 1; /* Ensure it appears above any background effects */
     text-align: center;
   }
   
   .coming-soon h1 {
     font-size: 4rem; /* Large font size */
-    color: #ffffff; /* White text */
+    color: #ffffff; /* White text for contrast */
     font-family: "Orbitron", sans-serif; /* Tech-inspired font */
     text-transform: uppercase;
     letter-spacing: 5px;
