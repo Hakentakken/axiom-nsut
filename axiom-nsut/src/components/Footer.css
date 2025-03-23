@@ -1,0 +1,19 @@
+/* Footer container */
+.footer {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for the footer */
+  color: white; /* White text color */
+  text-align: center; /* Center-align the text */
+  padding: 20px 0; /* Padding for spacing */
+  font-size: 1rem; /* Normal font size */
+  position: relative; /* Ensure footer is positioned correctly */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Footer text */
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2rem; /* Slightly larger footer text */
+  letter-spacing: 1px; /* Add spacing between letters */
+}

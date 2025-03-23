@@ -1,0 +1,168 @@
+.events-container {
+    min-height: 100vh;
+    color: white;
+    padding: 40px 20px;
+    background-color: #121212; /* Dark background for a professional look */
+    font-family: Arial, sans-serif;
+  }
+  
+/* Events Heading */
+.events-heading {
+  font-family: "Poppins", sans-serif; /* Clean and professional font */
+  font-size: 3rem; /* Large font size for emphasis */
+  font-weight: 700; /* Bold for a strong heading */
+  color: #ffffff; /* White text for contrast on dark background */
+  text-align: center; /* Center the heading */
+  margin: 0 auto; /* Center the heading horizontally */
+  padding: 40px 20px; /* Add padding for spacing */
+  text-transform: uppercase; /* Make the text uppercase for emphasis */
+  letter-spacing: 2px; /* Add spacing between letters */
+  position: relative; /* For decorative effects */
+  overflow: hidden; /* Ensure effects stay within bounds */
+  padding-top: 60px;
+}
+
+/* Add a subtle underline effect */
+.events-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 5px; /* Reduce the space between the underline and the heading */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; /* Increase the width of the underline */
+  height: 4px; /* Thickness of the underline */
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient underline */
+  border-radius: 2px; /* Rounded edges for the underline */
+  animation: slideIn 1.5s ease-in-out; /* Subtle animation for the underline */
+}
+
+/* Keyframe animation for the underline */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 150px; /* Match the final width of the underline */
+  }
+}
+
+  
+  .events-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+  }
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .event-section {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .event-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .event-date-location {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #f0a500;
+  }
+  
+  .event-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .event-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .carousel-item {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust size for 3 items per row */
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .carousel-item img,
+  .carousel-item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  /* Event Images Row */
+.event-images-row {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.event-images-row .media-item {
+  flex: 0 0 300px; /* Fixed width for each image */
+  height: 200px; /* Fixed height for images */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-images-row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 8px; /* Keeps the rounded corners consistent */
+}
+
+/* Event Videos Row */
+.event-videos-row {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.event-videos-row .media-item {
+  flex: 0 0 300px; /* Fixed width for each video */
+  height: 200px; /* Fixed height for videos */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-videos-row video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the container without distortion */
+  border-radius: 8px; /* Keeps the rounded corners consistent */
+}
+
+/* Add hover effect for both images and videos */
+.media-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

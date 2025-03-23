@@ -1,0 +1,286 @@
+/* Container for the About Us page */
+.about-container {
+  position: relative; /* Ensures content is above the particles */
+  z-index: 1; /* Higher z-index than particles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  background: transparent; /* Transparent background for particles */
+}
+
+/* Page heading */
+.about-heading {
+  font-size: 3.5rem; /* Large and bold heading */
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff; /* Default color */
+  font-family: 'Orbitron', sans-serif; /* Tech-inspired font */
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient effect */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  text-align: center;
+}
+/* Description text */
+.about-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  font-style: italic; /* Philosophical touch */
+  color: rgba(255, 255, 255, 0.8); /* Softer white */
+  font-family: 'Roboto', sans-serif; /* Clean and readable font */
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Individual card styling */
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Transparent card background */
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Pop-up effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00c6ff; /* Highlight color */
+  font-family: 'Orbitron', sans-serif; /* Tech-inspired font */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* Card content */
+.card-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Softer white */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Long card container */
+.long-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.long-card:hover {
+  transform: translateY(-10px); /* Slight pop-up effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+}
+
+/* Long card title */
+.long-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00c6ff; /* Highlight color */
+  font-family: 'Orbitron', sans-serif; /* Tech-inspired font */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+
+/* Long card content */
+.long-card-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9); /* Softer white for text */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+/* Long card image container */
+.long-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.long-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.long-card-image:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+  filter: brightness(1.2); /* Brighten the image */
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for fade-in-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Gallery Section */
+.gallery-container {
+  margin-top: 50px;
+  overflow: hidden; /* Hide overflowing images */
+  position: relative;
+  width: 100%;
+}
+.gallery-slider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden; /* Hide overflowing content */
+  width: 100%;
+}
+
+/* Gallery Track */
+.gallery-track {
+  display: flex;
+  animation: scrollGallery 20s linear infinite; /* Smooth scrolling animation */
+}
+
+
+.gallery-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff; /* Default color */
+  font-family: 'Orbitron', sans-serif; /* Tech-inspired font */
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient effect */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Individual Gallery Item */
+.gallery-item {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 300px; /* Fixed width for each image */
+  margin-right: 20px; /* Space between images */
+  border-radius: 8px; /* Optional: Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* Keyframe Animation for Scrolling */
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by half the width of the track */
+  }
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom the image slightly */
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(240, 165, 0, 0.3), rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 1; /* Add gradient overlay on hover */
+}
+
+.gallery-item::after {
+  content: "View Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1; /* Show text on hover */
+}
