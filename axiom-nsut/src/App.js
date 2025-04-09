@@ -7,6 +7,7 @@ import Team from "./pages/Team";
 import Events from "./pages/Events";
 import Podcast from "./pages/Podcast";
 import Newsletter from "./pages/Newsletter";
+import Alumni from "./pages/alumni"; // Import the Alumni page
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/alumni" element={<Alumni />} /> {/* Add Alumni route */}
         </Routes>
       </div>
     </Router>

@@ -44,6 +44,11 @@ const NavBar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/alumni" className="navbar-link">
+            Alumni
+          </Link>
+        </li>
+        <li>
           <Link to="/podcast" className="navbar-link">
             Podcast
           </Link>

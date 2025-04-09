@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'); /* Import Montserrat font */
+
+.alumni-page {
+  background: transparent; /* Transparent background for Particle.js visibility */
+  color: #ffffff; /* Professional white text color */
+  padding: 100px 20px; /* Increased top padding to lower the content */
+  text-align: center;
+  font-family: "Montserrat", sans-serif; /* Use Montserrat font */
+  animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+.alumni-title {
+    font-size: 3rem; /* Increased font size for emphasis */
+    font-weight: 700; /* Bold font for a strong appearance */
+    color: #00bcd4; /* Cyan color */
+    background: linear-gradient(90deg, #00bcd4, #1de9b6); /* Gradient effect */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Make the gradient visible */
+    margin-bottom: 50px; /* Space below the heading */
+    text-shadow: 2px 2px 10px rgba(0, 188, 212, 0.5); /* Subtle glow effect */
+    letter-spacing: 2px; /* Add spacing between letters */
+    text-transform: uppercase; /* Make the text uppercase */
+  }
+
+.alumni-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 30px; /* Increased gap for better spacing */
+  justify-content: center;
+}
+
+.alumni-card {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black for contrast */
+  border: 1px solid #00bcd4; /* Cyan border for a modern look */
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%; /* Adjusted width for better responsiveness */
+  max-width: 400px; /* Limit the maximum width of cards */
+  margin: 0 auto; /* Center the cards horizontally */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(30px); /* Initial position for animation */
+  animation: cardSlideIn 0.6s ease-in-out forwards; /* Slide-in animation */
+}
+
+.alumni-card:nth-child(odd) {
+  animation-delay: 0.2s; /* Staggered animation for odd cards */
+}
+
+.alumni-card:nth-child(even) {
+  animation-delay: 0.4s; /* Staggered animation for even cards */
+}
+
+.alumni-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.alumni-card-header {
+  margin-bottom: 15px;
+}
+
+.alumni-name {
+  font-size: 1.5rem;
+  color: #00bcd4; /* Cyan for names */
+  font-weight: 600; /* Bold font for emphasis */
+}
+
+.alumni-position {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* Light gray for positions */
+  font-weight: 400; /* Regular weight for contrast */
+}
+
+.alumni-year {
+  font-size: 1rem;
+  color: #b0b0b0; /* Subtle gray for years */
+  font-weight: 400; /* Regular weight */
+}
+
+/* Fade-in animation for the page */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for cards */
+@keyframes cardSlideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.alumni-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alumni-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.alumni-image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.alumni-image-container:hover .alumni-image {
+  transform: scale(1.1);
+}
