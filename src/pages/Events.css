@@ -186,6 +186,25 @@
   width: 100%;
 }
 
+/* Show vertical scroll if more than 8 images */
+.event-images-row.scrollable {
+  max-height: 480px; /* Adjust as needed */
+  overflow-y: auto;
+  padding-right: 8px; /* For scrollbar space */
+  scrollbar-width: thin;
+  scrollbar-color: #00fff7 #181f2a;
+}
+
+/* Optional: Custom scrollbar styling for Webkit browsers */
+.event-images-row.scrollable::-webkit-scrollbar {
+  width: 8px;
+  background: #181f2a;
+}
+.event-images-row.scrollable::-webkit-scrollbar-thumb {
+  background: #00fff7;
+  border-radius: 6px;
+}
+
 /* Media item */
 .media-item {
   border-radius: var(--border-radius-md);

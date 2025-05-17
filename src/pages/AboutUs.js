@@ -112,7 +112,10 @@ const AboutUs = () => {
           <h2 className="gallery-heading">GALLERY</h2>
           <div className="carousel-gallery">
             {getVisibleImages().map((img, idx) => (
-              <div className="carousel-image-wrapper" key={idx}>
+              <div
+                className="carousel-image-wrapper"
+                key={`${current}-${idx}-${img}`} // Unique key for each carousel state
+              >
                 <img
                   src={img}
                   alt={`Gallery item ${current + idx + 1}`}

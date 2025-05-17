@@ -207,7 +207,7 @@ const Events = () => {
             }) && (
               <>
                 <h4 className="media-row-title">Event Gallery</h4>
-                <div className="event-images-row">
+                <div className={`event-images-row${event.media.length > 8 ? " scrollable" : ""}`}>
                   {event.media
                     .filter(media => {
                       const path = typeof media === 'string' ? media : (media && media.default ? media.default : '');
